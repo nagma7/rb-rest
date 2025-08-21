@@ -125,36 +125,5 @@ public class MainAllController {
     public ResponseEntity<ZapMeryData> getZapMeryData(String date, String nod, String st){
 		return ResponseEntity.ok(zapMeryService.getZapMery(date, nod, st));
     }
-	
-	//nbd
 
-	@PostMapping(path= "api/narushbezopallnbd")
-    public ResponseEntity<Map<String, Object>> getRbNarushBezopAllNbd(String beginDate, String endDate){
-		return ResponseEntity.ok(narushBezopService.getNarushBezopWithoutNod(beginDate, endDate));
-    }
-	
-	@PostMapping(path= "api/cpido")
-	public ResponseEntity<Map<String, Object>> getCpdoData(String beginDate, String endDate){
-		//return ResponseEntity.ok(mainNbdService.getRazrezStruct(date, nod));
-		return ResponseEntity.ok(mainNbdService.getCpDOData(beginDate, endDate));
-    }
-	
-	@PostMapping(path= "api/nbdrazrezhoz")
-	public ResponseEntity<Map<String, Object>> getNbdRazrezHoz(String beginDate, String endDate, String st, int own){
-		return ResponseEntity.ok(rbHozAnswerService.getNBDRbHozList(beginDate, endDate, st, own));
-    }
-	
-	@PostMapping(path= "api/njsnodgpchartdata")
-    public ResponseEntity<Map<String, Object>> getNbdWithNodByStruct(String beginDate, String endDate, String st){
-		return ResponseEntity.ok(narushBezopService.getNjsNodgpData(beginDate, endDate, st));
-    }
-	
-	@PostMapping(path= "api/compnother")
-    public ResponseEntity<Map<String, Object>> getCompNProch(String beginDate, String endDate, int own){
-		return ResponseEntity.ok(narushBezopService.getCompNOther(beginDate, endDate, own));
-    }
-	@PostMapping(path= "api/nbdrazrez")
-    public ResponseEntity<Map<String, Object>> getNbdRazrez(String beginDate, String endDate){
-		return ResponseEntity.ok(narushBezopService.getRazrezNbd(beginDate, endDate));
-    }
 }

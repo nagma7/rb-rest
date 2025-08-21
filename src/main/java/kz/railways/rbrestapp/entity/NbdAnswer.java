@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Getter
-@Setter
+@Setter	
 public class NbdAnswer {
 	private String strukt;
 	private int lastCount;
